@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html>
+<body>
+<h1 id="title">Project Megan</h1>
+<p id="demo">no data found until now</p>
+	<p id="count">counter</p>
+		<!-- trimitere date gasite catre aplicatia octopus -->
+		--------Experimental app for event prediction and for research--------<form id="octoform" method="POST" action="/octopus.php" enctype="multipart/form-data" data-ajax="false">
+		Random Number Generator <input type="textarea" id="octopustext" name="octopustext" value="do not fill this area. this is filled automaticaly by the system"/>
+ Your data:<input type="textarea" id="octoinput" name="octobyuser" placeholder="enter your data to search" onclick="clearInterval(myVar)" /><br />
+		<input type="button" value="start" name="submiopus" class="btn" onclick="startocto();">
+		 </form>--------
+	<script>
+
+ //   var x = document.getElementById("demo");
+ //    p= String(Math.floor((Math.random() * 99) + 1)+""+Math.floor((Math.random() * 99) + 1)+""+Math.floor((Math.random() * 9999) + 1)+""+Math.floor((Math.random() * 99) + 1)+""+Math.floor((Math.random() * 99) + 1)+""+Math.floor((Math.random() * 9999) + 1)+""+Math.floor((Math.random() * 99) + 1)+""+Math.floor((Math.random() * 99) + 1)+""+Math.floor((Math.random() * 9999) + 1)+""+Math.floor((Math.random() * 99) + 1)+""+Math.floor((Math.random() * 99) + 1)+""+Math.floor((Math.random() * 9999) + 1));
+count=0;
+i=1;
+function startocto() {
+var myVar = setInterval(octo , 10);
+}
+function octo() {
+ var x = document.getElementById("demo");
+     p= String(Math.floor((Math.random() * 99) + 1)+""+Math.floor((Math.random() * 99) + 1)+""+Math.floor((Math.random() * 9999) + 1)+""+Math.floor((Math.random() * 99) + 1)+""+Math.floor((Math.random() * 99) + 1)+""+Math.floor((Math.random() * 9999) + 1)+""+Math.floor((Math.random() * 99) + 1)+""+Math.floor((Math.random() * 99) + 1)+""+Math.floor((Math.random() * 9999) + 1)+""+Math.floor((Math.random() * 99) + 1)+""+Math.floor((Math.random() * 99) + 1)+""+Math.floor((Math.random() * 9999) + 1));
+document.getElementById("count").innerHTML=i;i++;
+wz= "6217786419177121941";
+//p="6217786419177121941";
+wzdinamic=document.getElementById('octoinput').value;
+var re = new RegExp(wz, 'g');
+var str = "58470262976427026297662177864191771219414256699762602009456569967652602009554826985"; 
+   // var res = p.match(/6217786419177121941/g);
+var re = new RegExp(wzdinamic, 'g');res = p.match(re);
+
+ if (Array.isArray(res) && wzdinamic!="" ) {alert('data:'+res[0]);
+  if(res[0]==wzdinamic ){alert('you found data:'+p);x.innerHTML=p;document.getElementById('octopustext').value=p;
+//document.getElementById("octoform").submit();
+ }}
+document.getElementById('octopustext').value=p;
+
+}
+</script>
+</body>	
+</html>
